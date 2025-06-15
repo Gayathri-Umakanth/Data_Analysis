@@ -1,1 +1,13 @@
+Total_Revenue = SUM(pizza_sales[total_price])
 
+Total_Orders = DISTINCTCOUNT(pizza_sales[order_id])
+
+Average_Order_Value = [Total_Revenue]/[Total_Orders]
+
+Total_Pizza_Sold = SUM(pizza_sales[quantity])
+
+Average_Pizzas_Per_Order = [Total_Pizza_Sold]/[Total_Orders]
+
+Order_Day = UPPER(LEFT(pizza_sales[Day Name], 3))
+
+Order_Month = UPPER(LEFT(pizza_sales[Month_Name], 3))
